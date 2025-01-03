@@ -10,11 +10,11 @@ async def amain() -> None:
     #### ASYNC ####
     client = AgentClient(settings.BASE_URL)
 
-    print("Agent info:")
+    print("智能体信息:")
     print(client.info)
 
-    print("Chat example:")
-    response = await client.ainvoke("Tell me a brief joke?", model=AliModelName.Qwen2)
+    print("聊天示例:")
+    response = await client.ainvoke("给我简短地说个笑话？中文回答", model=AliModelName.Qwen2)
     response.pretty_print()
 
     print("\nStream example:")
